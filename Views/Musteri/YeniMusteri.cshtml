@@ -1,0 +1,25 @@
+﻿@model MvcStok.Models.Entity.Table_musteri
+@{
+    ViewBag.Title = "YeniMusteri";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <lable> Müşteri adı </lable>
+       
+        @Html.TextBoxFor(m=>m.MusteriAd, new  { @class = "form-control"})
+   @Html.ValidationMessageFor(m=> m.MusteriAd, "" ,new {@style="color:red"})
+  
+    </div>
+    <div>
+        <lable> Müşteri Soyadı </lable>
+        <input type="text" name="müsterisoyad"
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info">Müşteri Ekle</button>
+    </div>
+
+
+</form>
+
